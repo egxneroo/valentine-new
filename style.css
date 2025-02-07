@@ -42,3 +42,12 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+@media (max-width: 600px) {
+    body{
+        position: absolute;
+        top:100%;
+        right:0;
+        width:20%;
+        background-color: #ff69b4;
+    }
+}
