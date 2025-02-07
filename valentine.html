@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Will you be my valentine?</h1>
+    <div class="button1">
+        <button id ="yesButton">yes</button>
+    </div>
+    <div class="button2">
+        <button id="noButton">no</button>
+    </div>
+    <script>
+        document.getElementById("noButton").addEventListener("click", function() {
+            const button = document.getElementById("noButton");
+            const randomX = Math.floor(Math.random() * (window.innerWidth - button.clientWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - button.clientHeight));
+            
+            button.style.position = "absolute";
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+        });
+        document.getElementById("yesButton").addEventListener("click", function() {
+            window.location.href = "yes.html";
+        });
+    </script>
+     <div class="gif">
+        <img src="media/bugcat-capoo.gif">
+    </div>
+</body>
+</html>
